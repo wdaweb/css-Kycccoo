@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        .box {
+            width: 500px;
+            height: 500px;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: black;
+            border-radius: 50%;
+        }
+
+        .box::before {
+            content: '';
+            width: 75px;
+            height: 75px;
+            position: absolute;
+            border: 10px solid white;
+            background: black;
+            border-radius: 50%;
+            top: 25%;
+            left: 20%;
+        }
+
+        .box::after {
+            content: '';
+            width: 75px;
+            height: 75px;
+            position: absolute;
+            border: 10px solid white;
+            background: black;
+            border-radius: 50%;
+            top: 25%;
+            right: 20%;
+            z-index: 1;
+        }
+
+        .er {
+            width: 250px;
+            height: 150px;
+            margin: auto;
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            border: 5px solid black;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .er::before {
+            content: '';
+            width: 70px;
+            height: 70px;
+            position: absolute;
+            border: 10px solid black;
+            background: white;
+            border-radius: 50%;
+            bottom: 190%;
+            right: -30%;
+            z-index: 1;
+        }
+
+        .er::after {
+            content: '';
+            width: 70px;
+            height: 70px;
+            position: absolute;
+            border: 10px solid black;
+            background: white;
+            border-radius: 50%;
+            bottom: 190%;
+            left: -30%;
+            z-index: 1;
+        }
+
+        .m {
+            width: 40px;
+            height: 25px;
+            margin: auto;
+            position: absolute;
+            background: black;
+            border-radius: 50%;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .m::after {
+            content: '';
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            background: red;
+            border-radius: 50%;
+            left: 200px;
+            z-index: 1;
+        }
+
+        .m::before {
+            content: '';
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            background: red;
+            border-radius: 50%;
+            right: 200px;
+            z-index: 1;
+        }
+
+        .x {
+            width: 90px;
+            height: 40px;
+            margin: auto;
+            position: absolute;
+            background: black;
+            border-radius: 50%;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .x::before {
+            content: '';
+            width: 50px;
+            height: 100px;
+            margin: auto;
+            position: absolute;
+            background: white;
+            top: 100px;
+            left: -15%;
+            transform: skew(35deg);
+        }
+
+        .x::after {
+            content: '';
+            width: 50px;
+            height: 100px;
+            margin: auto;
+            position: absolute;
+            background: white;
+            top: 100px;
+            right: -20%;
+            transform: skew(-35deg);
+        }
+    </style>
+</head>
+
+<body>
+    <section class="box">
+        <div class="e"></div>
+        <div class="er">
+            <div class="m"></div>
+        </div>
+        <div class="x"></div>
+    </section>
+</body>
+
+</html>
